@@ -1,0 +1,89 @@
+ps -ef|grep python
+
+kill -9 21318
+
+
+带-ltr组合选项能以文件或目录的最新修改时间的次序来显示它们。
+ls -trl
+查看链接5000的链接
+netstat -anp|grep 5000
+
+ifconfig
+
+iptables命令是Linux上常用的防火墙软件，是netfilter项目的一部分
+
+iptables -L -n
+-t<表>：指定要操纵的表； 
+-A：向规则链中添加条目； 
+-D：从规则链中删除条目； 
+-i：向规则链中插入条目； 
+-R：替换规则链中的条目； 
+-L：显示规则链中已有的条目； 
+-F：清楚规则链中已有的条目； 
+-Z：清空规则链中的数据包计算器和字节计数器； 
+-N：创建新的用户自定义规则链； 
+-P：定义规则链中的默认目标； 
+-h：显示帮助信息； 
+-p：指定要匹配的数据包协议类型； 
+-s：指定要匹配的数据包源ip地址； 
+-j<目标>：指定要跳转的目标； 
+-i<网络接口>：指定数据包进入本机的网络接口； 
+-o<网络接口>：指定数据包要离开本机所使用的网络接口。
+
+wget http://127.0.0.1:5000/
+wget命令用来从指定的URL下载文件。wget非常稳定，它在带宽很窄的情况下和不稳定网络中有很强的适应性，如果是由于网络的原因下载失败，wget会不断的尝试，直到整个文件下载完毕。如果是服务器打断下载过程，它会再次联到服务器上从停止的地方继续下载。这对从那些限定了链接时间的服务器上下载大文件非
+
+cat index.html
+1.一次显示整个文件。$ cat filename
+
+curl www.linux.com
+www.linux.com 的html就会显示在屏幕上了
+
+telnet 127.0.0.1 8082
+
+ipstable status
+
+service iptables start  
+service iptables stop  
+service iptables save  
+service iptables reload  
+service iptables status  
+chkconfig --list iptables  
+开启和关闭iptables功能,还有保存和重新加载相关配置的命令
+
+查看当前的防火墙设置
+iptables -L INPUT -n --line-numbers  ，通过命令iptables -L也可以查看，本例开通了
+
+nohup python Test.py &
+后台不间断的执行命令
+
+scp  -r   /Users/yujin/PycharmProjects/DeployTest    root@目标IP:/website/DeployTest
+
+
+
+gunicorn --bind unix:/tmp/systemsgt.cn.socket blogproject.wsgi:application
+启动服务
+
+scrapy startproject city_58
+创建scrapy项目
+scrapy genspider spider_city_58 58.com
+生成相关代码
+
+df -h ch
+查看服务器云盘大小
+
+virtualenv blogproject_env
+创建虚拟环境
+source blogproject_env/bin/activate
+进入虚拟环境
+deactivate
+退出虚拟环境，回到正常shell
+
+
+
+
+
+
+
+
+
