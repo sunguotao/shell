@@ -22,6 +22,9 @@ show engines;
 show variables like 'storage_engine';
 查看数据库默认储存引擎
 
+USE test_db;
+选择创建表的数据库
+
 create table tb_emp1
 (
 id int(11),
@@ -52,6 +55,46 @@ salary float,
 primary key(id)
 );
 另外一种方式设置主键，创建表，设置ID为primary key(主键)
+
+create table tb_emp6
+(
+id int(11)primary key,
+name varchar(25),
+deptId INT(11),
+salary FLOAT,
+CONSTRAINT fk_emp_dept1 FOREIGN KEY(deptId) REFERENCES tb_dept1(id)
+);
+在表tb_emp6上添加名称为fk_emp_dept1的外键约束，外键名称为deptId,其依赖表tb_dept1的主键id
+
+CREATE TABLE tb_emp8
+(
+id INT(11) PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(22) NOT NULL,
+deptId INT(11) DEFAULT 11111,
+salary FLOAT
+);
+创建表 id 自动增长
+
+INSERT INTO tb_emp8 (name,salary) VALUES('Lucy',1000),('Lura',1200),('Kevin',1500);
+插入 name salary
+
+SELECT * FROM tb_emp8;
+查询表中的记录
+
+DESCRIBE tb_dept1;      DESC tb_dept1;
+查看表结构
+
+SHOW CREATE TABLE tb_emp1 \G
+查看表结构
+
+ALTER TABLE tb_dept3 RENAME tb_deptment3;
+修改表名
+
+ALTER TABLE tb_dept1 CHANGE location loc VARCHAR(50);
+修改表中字段名
+
+
+
 
 
 
