@@ -81,6 +81,10 @@ source blogproject_env/bin/activate
 deactivate
 退出虚拟环境，回到正常shell
 
+首先需要使用以下方法在终端启动MongoDB
+cd /usr/local/mongodb/bin
+sudo ./mongod
+
 
 
 
