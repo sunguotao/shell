@@ -85,6 +85,9 @@ deactivate
 cd /usr/local/mongodb/bin
 sudo ./mongod
 
+//文件重命名  old.txt老的文件 new.txt新的文件
+mv old.txt new.txt
+
 
 
 
