@@ -82,9 +82,7 @@ deactivate
 退出虚拟环境，回到正常shell
 
 首先需要使用以下方法在终端启动MongoDB
-cd /usr/local/mongodb/bin
-sudo ./mongod
-
+sudo mongod  --config  /usr/local/etc/mongod.conf
 //文件重命名  old.txt老的文件 new.txt新的文件
 mv old.txt new.txt
 
